@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="website.css">
     <link rel="shortcut icon" type="image/jpg" href="assets/icon.jpg"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <title>Dulkifal</title>
 </head>
@@ -274,23 +275,21 @@
                 </div>
             </div>
             <div class="contact-form">
-                <h3>Send Message</h3>
-                <div class="input-box">
-                    <input type="text" name="" value="" placeholder="Name">
-
-                </div>
-                <div class="input-box">
-                    <input type="text" name="" value="" placeholder="Email">
-
-                </div>
-                <div class="input-box">
-                    <textarea name="name" id="" cols="80" rows="8" placeholder="Message"></textarea>
-
-                </div>
-                <div class="input-box">
-                    <input type="submit" class="send-btn">
-
-                </div>
+                 
+                  <div class="column">
+                <form id="submit-form" action="">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="name" placeholder="Your name..">
+                  <label for="lname">Email</label>
+                  <input type="text" id="lname" name="email" placeholder="Your email please ....">
+                   
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="message" placeholder="Write something.." style="height:170px"></textarea>
+                  <input type="submit" value="Submit">
+                </form>
+              </div>
+                
+                
             </div>
 
         </div>
