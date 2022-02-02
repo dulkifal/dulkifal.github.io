@@ -436,7 +436,8 @@ margin: 10px;
 .contact-form{
     background: #fff;
     max-width: 600px;
-    margin-top: 50px;
+    margin: auto;
+    margin-top: 3rem;
     padding: 50px;
     border: radius 10px; 
     box-shadow: 0 5px 25px rgba(1 1 1 /15%);
@@ -641,7 +642,7 @@ input[type=text], select, textarea {
   /* Create two columns that float next to eachother */
   .column {
     float: left;
-    width: 50%;
+     
     margin-top: 6px;
     padding: 20px;
   }
