@@ -4,13 +4,14 @@ $("#submit-form").submit((e)=>{
         url:"https://script.google.com/macros/s/AKfycbweIFSA6Z2u9F9n4eWKVWSIBj2TgUc9IMQ5JGS-UXiL54NtiFKh0uhH3a_6mZVW2K6O/exec",
         data:$("#submit-form").serialize(),
         method:"post",
-        success:function (response){
+        success:function ( ){
             alert("Form submitted successfully")
             window.location.reload()
             // window.location.href="https://google.com"
+
         },
-        error:function (err){
-            alert("Something Error")
+        error:function ( ){
+            alert("Error " )
 
         }
     })
@@ -23,7 +24,7 @@ header.classList.toggle('sticky', window.scrollY >0);
 
 const menuBtn = document.querySelector('.menu-btn');
 const navigation = document.querySelector('.navigation');
-const navigationItems = document.querySelectorAll('.navigation a');
+// const navigationItems = document.querySelectorAll('.navigation a');
 
 menuBtn.addEventListener('click', ()=>{
     menuBtn.classList.toggle('active');
