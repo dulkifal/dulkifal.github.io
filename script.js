@@ -24,7 +24,7 @@ header.classList.toggle('sticky', window.scrollY >0);
 
 const menuBtn = document.querySelector('.menu-btn');
 const navigation = document.querySelector('.navigation');
-// const navigationItems = document.querySelectorAll('.navigation a');
+const navigationItems = document.querySelectorAll('.navigation a');
 
 menuBtn.addEventListener('click', ()=>{
     menuBtn.classList.toggle('active');
@@ -33,7 +33,7 @@ menuBtn.addEventListener('click', ()=>{
 });
 
 navigationItems.forEach((navigationItem) =>{
-    navigationItems.addEventListener('click', ()=>{
+    navigationItem.addEventListener('click', ()=>{
         menuBtn.classList.remove('active');
         navigation.classList.remove('active');
     })
