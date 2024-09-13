@@ -221,8 +221,10 @@ body{
     margin-bottom: 20px;
 
 }
-about .content .col-right .paragraph-text{
-    font-size: 1em;
+ .paragraph-text{
+    font-size: 1.1em;
+    line-height: 2;
+    margin-bottom: 20px;
 }
 
 .skills{
