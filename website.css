@@ -621,6 +621,12 @@ input[type=text], select, textarea {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
+    border-radius: 20px ;
+    outline: none;
+    font-size: 1em;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px inset;
+
   }
   
   input[type=submit] {
@@ -629,6 +635,7 @@ input[type=text], select, textarea {
     padding: 12px 20px;
     border: none;
     cursor: pointer;
+    border-radius: 10px ;
   }
   
   input[type=submit]:hover {
@@ -785,3 +792,7 @@ input[type=text], select, textarea {
     }
   }
   
+  /*  */
+  label{
+    margin-left: 10px;
+  }
