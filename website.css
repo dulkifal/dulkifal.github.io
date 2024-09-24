@@ -165,7 +165,7 @@ body{
     position: absolute;
     top: 56px;
     left: 50%;
-    width: 190px;
+    width: 180px;
     height: 4px;
     background: #3a6cf4;
     transform: translateX(-50%);
@@ -174,7 +174,7 @@ body{
     content: '';
     position: absolute;
     top: 50px;
-    left: 95px;
+    left: 70px;
     width: 15px;
     height: 15px;
     border-radius: 50%;
