@@ -4,6 +4,8 @@
      box-sizing: border-box;
      font-family: Poppins, sans-serif;
      scroll-behavior: smooth;
+     font-weight: 300;
+  font-style: normal;
  }
  section{
      padding: 100px 100px;
