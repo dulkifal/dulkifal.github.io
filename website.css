@@ -1,3 +1,8 @@
+:root {
+    --main-color: #3a6cf4;
+    --secondary-color: #2ecc71;
+    --font-size: 16px;
+  }
  *{
      margin: 0;
      padding: 0;
@@ -73,7 +78,7 @@
  }
  .btn{
      color: #fff;
-     background: #3a6cf4;
+     background: var(--main-color);
      font-size: 1em;
      font-weight: 600;
      display: inline-block;
@@ -111,7 +116,7 @@ header{
     transition: 0.5s ease;
 }
 header.sticky{
-    background: #3a6cf4;
+    background: var(--main-color);
     padding: 10px 200px;
 }
 header .brand{
@@ -156,7 +161,7 @@ body{
 }
 .section-title{
     position: relative;
-    color: #3a6cf4;
+    color: var(--main-color);
     font-size: 2.2em;
     font-weight: 800;
     margin-bottom: 60px;
@@ -169,7 +174,7 @@ body{
     left: 50%;
     width: 180px;
     height: 4px;
-    background: #3a6cf4;
+    background: var(--main-color);
     transform: translateX(-50%);
 }
 .section-title::after{
@@ -180,10 +185,19 @@ body{
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: #3a6cf4;
+    background: var(--main-color);
     transform: translateX(-50%);
 
 }
+
+.circle-shape {
+    width: 20px;
+    height: 20px;
+    float: left;
+    shape-outside: circle(50%);
+    clip-path: circle(50%);
+    background: #3498db;
+  }
 
 .about .content{
     position: relative;
@@ -332,7 +346,7 @@ body{
     border-radius:10px ;
 }
 .services .content .card .services-icon{
-    color:  #3a6cf4;
+    color:  var(--main-color);
     font-size: 8em;
     text-align: center;
     transition: transform 0.5s ease;
@@ -346,7 +360,7 @@ transform: translateY(-10px);
 }
 
 .services .content .card .info h3{
-    color: #3a6cf4;
+    color: var(--main-color);
     font-size: 1.2em;
     font-weight: 700;
     margin: 10px;
@@ -372,6 +386,7 @@ transform: translateY(-10px);
     height: 260px;
     overflow:  hidden;
     border-radius: 10px;
+    background-color: #ffff;
 }
 .work .content .card .card-img img{
     position: absolute;
@@ -415,7 +430,7 @@ margin-top: 20px;
 
 }
 .contact .content .row .card .contact-icon{
-    color:  #3a6cf4;
+    color:  var(--main-color);
     font-size: 4em;
     text-align: center;
     transition: transform 0.5s ease;
@@ -474,7 +489,7 @@ margin: 10px;
 }
 .contact-form .input-box .send-btn{
     color: #fff;
-    background: #3a6cf4;
+    background: var(--main-color);
     display: inline-block;
     font-size: 1.1em;
     font-weight: 500;
@@ -504,7 +519,7 @@ margin: 10px;
     margin-top: 10px;
 }
 .footer p a{
-    color: #3a6cf4;
+    color: var(--main-color);
     font-weight: 600;
     text-decoration: none;
 }
@@ -543,7 +558,7 @@ margin: 10px;
     }
 
     header .navigation a:hover{
-        background: #3a6cf4;
+        background: var(--main-color);
         color: #fff;
         transition: 0.3s ease;
     }
@@ -638,6 +653,7 @@ input[type=text], select, textarea {
     border: none;
     cursor: pointer;
     border-radius: 10px ;
+    transition: background-color 0.3s ease;
   }
   
   input[type=submit]:hover {
