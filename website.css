@@ -27,6 +27,10 @@
      background-size: cover;
      background-position: center;
      background-attachment: fixed;
+     mask-image: url(/assets/ink_lv2.gif);
+     mask-size: cover;
+     mask-position: center;
+     mask-repeat: no-repeat;
 
  }
  .main .content{
@@ -190,14 +194,7 @@ body{
 
 }
 
-.circle-shape {
-    width: 20px;
-    height: 20px;
-    float: left;
-    shape-outside: circle(50%);
-    clip-path: circle(50%);
-    background: #3498db;
-  }
+
 
 .about .content{
     position: relative;
