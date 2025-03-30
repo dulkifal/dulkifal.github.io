@@ -27,7 +27,7 @@
      background-size: cover;
      background-position: center;
      background-attachment: fixed;
-     mask-image: url(/assets/ink_lv2.gif);
+     /* mask-image: url(/assets/ink_lv2.gif); */
      mask-size: cover;
      mask-position: center;
      mask-repeat: no-repeat;
