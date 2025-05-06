@@ -47,4 +47,6 @@ if (scrollBtn) {
         document.documentElement.scrollTop = 0;
     });
 }
+console.log("It syllabus");
+console.log("https://drive.google.com/drive/folders/17TZSULsm0csrgQdHQJw7i4dPN8Nc0rhM?usp=sharing")
 
