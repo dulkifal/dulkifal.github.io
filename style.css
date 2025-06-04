@@ -1,10 +1,13 @@
 :root {
-    --main-color: #0078D4;
+    --main-color: white;
     --secondary-color: #2ecc71;
+    --text-color: #5f6368;
+    --btn-color: rgb(26, 115, 232);
+
     --font-size: 16px;
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-shadow: rgba(0, 0, 0, 0.1);
+    --glass-bg: rgba(246, 241, 241, 0.844);
+    --glass-border: rgba(255, 255, 255, 0.769);
+    --glass-shadow: rgba(206, 198, 198, 0.656);
   }
  *{
      margin: 0;
@@ -25,10 +28,10 @@
      min-height: 100vh;
      display: flex;
      align-items: center;
-     background-color: rgb(8, 9, 31);
-     background: url(assets/hacker.jpg)no-repeat;
-     background-size: cover;
-     background-position: center;
+     background-color: var(--main-color);
+     background: url(assets/icon.jpeg)no-repeat;
+     background-size: contain;
+     background-position: right;  /* Changed from 'contain' to 'right' */
      background-attachment: fixed;
      /* mask-image: url(/assets/ink_lv2.gif); */
      mask-size: cover;
@@ -41,7 +44,7 @@
 
  }
  .main .content h2{
-     color: rgb(242, 248, 250);
+     color: var(--text-color);
      font-size: 2em;
      font-weight: 500;
  }
@@ -57,7 +60,7 @@
      overflow: hidden;
  }
  .animated-text h3{
-     color: #4e9eff;
+     color: var(--text-color);
      font-size: 3em;
      font-weight: 700;
      line-height: 70px;
@@ -85,7 +88,7 @@
  }
  .btn{
      color: #fff;
-     background: var(--glass-bg);
+     background: var(--btn-color);
      backdrop-filter: blur(4px);
      -webkit-backdrop-filter: blur(4px);
      border: 1px solid var(--glass-border);
@@ -157,7 +160,7 @@ header.sticky{
     padding: 10px 200px;
 }
 header .brand{
-    color: rgb(244, 245, 250);
+    color: var(--text-color);
     font-size: 1.8em;
     font-weight: 700;
     text-transform: uppercase;
@@ -170,7 +173,7 @@ header .navigation{
 }
 
 header .navigation a{
-    color: #fff;
+    color: var(--text-color);
     font-size: 1em;
     font-weight: 500;
     text-decoration: none;
@@ -201,7 +204,7 @@ body{
 }
 .section-title{
     position: relative;
-    color: var(--main-color);
+    color: var(--text-color);
     font-size: 2.2em;
     font-weight: 800;
     margin-bottom: 60px;
@@ -285,7 +288,7 @@ body{
 }
 
 .skills{
-    background: #000016;
+    /* background: #000016; */
 }
 
 .skills .content{
@@ -293,8 +296,11 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    color: #fff;
+    color: var(--text-color);
     margin-top: 20px;
+}
+.skills .content h2{
+    color: black;
 }
 .skills .content .col-left{
     position: relative;
@@ -391,7 +397,7 @@ body{
     transform-style: preserve-3d;
 }
 .services .content .card .services-icon{
-    color:  var(--main-color);
+    color:  var(--btn-color);
     font-size: 8em;
     text-align: center;
     transition: transform 0.5s ease;
@@ -411,7 +417,7 @@ transform: translateY(-10px);
 }
 
 .services .content .card .info h3{
-    color: var(--main-color);
+    color: var(--text-color);
     font-size: 1.2em;
     font-weight: 700;
     margin: 10px;
@@ -499,7 +505,7 @@ margin-top: 20px;
 }
 
 .contact .content .row .card .contact-icon{
-    color:  var(--main-color);
+    color:  var(--btn-color);
     font-size: 4em;
     text-align: center;
     transition: transform 0.5s ease;
@@ -771,7 +777,7 @@ input[type=submit] {
   }
   
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: var(--btn-color);
   }
   
   /* Style the container/contact section */
@@ -844,7 +850,7 @@ input[type=submit] {
     display: flex;
     align-items: center;
     gap: 0 0.2rem;
-    color: #e2e8f0;
+    color: var(--text-color);
     font-size: 0.9rem;
     background-color: var(--glass-bg);
     backdrop-filter: blur(4px);
@@ -869,7 +875,7 @@ input[type=submit] {
   
   .fade {
     pointer-events: none;
-    background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
+    background: linear-gradient(90deg, transparent, transparent 30%, transparent 70%, transparent);
     position: absolute;
     inset: 0;
   }
