@@ -594,8 +594,8 @@ margin: 10px;
 }
 
 .footer{
-    background: #000016;
-    color: #fff;
+    background: var(--glass-bg);
+    color: var(--text-color);
     text-align: center;
     padding: 2em;
 }
@@ -1037,4 +1037,26 @@ input[type=text], textarea {
 
 input[type=text]:focus, textarea:focus {
   transform: translateZ(5px);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+.social-icons i {
+    font-size: 24px;
+    /* color: var(--text-color); */
 }
