@@ -55,15 +55,15 @@
   <body>
     <header>
       <a href="#" class="brand">Dulkifal</a>
-      <div class="menu-btn"></div>
-      <div class="navigation">
+      <button class="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navigation-menu"></button>
+      <nav class="navigation" id="navigation-menu" role="navigation">
         <a href="#main">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#services">Services</a>
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
-      </div>
+      </nav>
     </header>
     <section class="main" id="main">
       <div class="content">
@@ -117,7 +117,7 @@
         </div>
       </div>
     </section>
-    <section class="skills" id="skills">
+    <section class="skills" id="skills" aria-labelledby="skills-title">
       <div class="title">
         <h2 class="section-title">MY Skills</h2>
       </div>
@@ -285,7 +285,7 @@
         </div>
       </div>
     </section>
-    <section class="work" id="work">
+    <section class="work" id="work" aria-labelledby="work-title">
       <div class="title">
         <h2 class="section-title">My Work</h2>
       </div>
@@ -298,7 +298,12 @@
           </div>
           <div class="card-body">
             <h3>Plaza Catering – Landing Site</h3>
-            <p>Responsive landing page for a catering business. Clean design and contact integration.</p>
+            <p>
+              Developed a responsive landing page for a local catering business to improve their online presence and lead generation.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span>
+            </div>
             <p class="tech">HTML • CSS • JavaScript</p>
             <div class="project-ctas">
               <a href="https://plazacatering.co.in/best-catering-services-in-trivandrum/" class="btn" target="_blank" rel="noopener">Live</a>
@@ -316,7 +321,12 @@
           </div>
           <div class="card-body">
             <h3>Changampally – Community Portal</h3>
-            <p>Community-focused site with fast navigation and content pages.</p>
+            <p>
+              Built a fast, modern community portal with Next.js for optimal performance and SEO, featuring dynamic content pages.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-badge">Next.js</span><span class="tech-badge">React</span><span class="tech-badge">Tailwind CSS</span>
+            </div>
             <p class="tech">Next.js • Tailwind CSS</p>
             <div class="project-ctas">
               <a href="https://changampally.com/" class="btn" target="_blank" rel="noopener">Live</a>
@@ -334,7 +344,12 @@
           </div>
           <div class="card-body">
             <h3>Future Vision Team – Company Site</h3>
-            <p>Corporate website showcasing services and team. SEO-friendly and responsive.</p>
+            <p>
+              Created a professional corporate website to showcase services and team expertise, focusing on responsive design and SEO.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-badge">Next.js</span><span class="tech-badge">React</span>
+            </div>
             <p class="tech">Next.js • React</p>
             <div class="project-ctas">
               <a href="https://future-vision-team.vercel.app/" class="btn" target="_blank" rel="noopener">Live</a>
@@ -352,7 +367,12 @@
           </div>
           <div class="card-body">
             <h3>Sibaq – Educational Platform</h3>
-            <p>Interactive learning UI with structured lessons and responsive layout.</p>
+            <p>
+              Designed an interactive UI for an educational platform, enabling structured lessons and a seamless user experience.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-badge">React</span><span class="tech-badge">Node.js</span>
+            </div>
             <p class="tech">React • Node.js</p>
             <div class="project-ctas">
               <a href="https://sibaq.vercel.app/" class="btn" target="_blank" rel="noopener">Live</a>
@@ -370,7 +390,12 @@
           </div>
           <div class="card-body">
             <h3>E‑commerce Dashboard</h3>
-            <p>Frontend of an e-commerce dashboard demonstrating product listings and responsive design.</p>
+            <p>
+              Developed the front-end of an e-commerce dashboard, demonstrating complex state management with Redux.
+            </p>
+            <div class="tech-stack">
+              <span class="tech-badge">React</span><span class="tech-badge">Redux</span><span class="tech-badge">CSS</span>
+            </div>
             <p class="tech">React • Redux • CSS</p>
             <div class="project-ctas">
               <a href="https://amazon-clone-frontend-zeta.vercel.app/" class="btn" target="_blank" rel="noopener">Live</a>
@@ -502,7 +527,7 @@
     <footer class="footer">    <!--Start of Tawk.to Script-->
       <span class="footer-title">Dulkifal</span>
       <p>Better Call Dulkifal</p>
-      <div class="social-icons">;
+      <div class="social-icons">
         <a href="https://www.facebook.com/dulkifilibacker.dulkifilibacker">
           <i class="fab fa-facebook-f"></i>
         </a>
@@ -521,8 +546,6 @@
     <script type="importmap">
       {
         "imports": {
-          "three": "https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js",
-          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/"
           "three": "https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js",
           "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/"
         }
