@@ -98,7 +98,7 @@
     }
  }
  .btn{
-     color: #fff;
+     color: #f2f8fc;
      background: var(--btn-color);
      backdrop-filter: blur(4px);
      -webkit-backdrop-filter: blur(4px);
@@ -460,7 +460,7 @@ transform: translateY(-10px);
     height: 260px;
     overflow:  hidden;
     border-radius: 10px;
-    background-color: #ffff;
+    background-color: #f2f8fc;
 }
 .work .content .card .card-img img{
     position: absolute;
@@ -567,7 +567,7 @@ margin: 10px;
 }
 .contact-form .input-box input, 
 .contact-form .input-box textarea{
-    color: #fff;
+    color: #f2f8fc;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -588,7 +588,7 @@ margin: 10px;
     transform: translateZ(5px);
 }
 .contact-form .input-box .send-btn{
-    color: #fff;
+    color: #f2f8fc;
     background: var(--main-color);
     display: inline-block;
     font-size: 1.1em;
@@ -636,7 +636,7 @@ margin: 10px;
     header .navigation.active{
         z-index: 888;
         position: fixed;
-        background: #fff;
+        background: #f2f8fc;
         top: 0;
         right: 0;
         width: 380;
@@ -659,7 +659,7 @@ margin: 10px;
 
     header .navigation a:hover{
         background: var(--main-color);
-        color: #fff;
+        color: #f2f8fc;
         transition: 0.3s ease;
     }
     .menu-btn{
