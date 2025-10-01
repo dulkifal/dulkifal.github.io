@@ -69,3 +69,28 @@ To set up the project locally, follow these steps:
 1. Clone the repository:
    ```sh
    git clone https://github.com/dulkifal/dulkifal.github.io.git
+   ```
+
+## What to Showcase (for MERN freelance)
+
+- 4–6 featured projects with:
+  - Short problem statement, your approach, and measurable impact (e.g. "+40% enquiries")
+  - Live demo + source code link
+  - Tech stack badges (React, Node, Express, MongoDB, Redux, Docker)
+  - Screenshots / video / architecture diagram
+- Case studies page per project (detailed)
+- Contact form wired to a backend lead endpoint (Express endpoint + email or CRM)
+- Blog or notes (optional) showing your technical depth (post: Deploying MERN with Docker + CI)
+
+## MERN checklist to demonstrate
+
+- Frontend: React (or Next.js), responsive design, accessibility (ARIA), unit tests (Jest)
+- Backend: Node + Express APIs, input validation, error handling
+- Database: MongoDB schema + backups
+- DevOps: Dockerfile, docker-compose, CI (GitHub Actions), deploy guide
+- Observability: Error tracking, Google Analytics / GTM, uptime (optional)
+
+## Run locally (short)
+
+1. Frontend: serve static with `npm run build` (Next/React)
+2. Backend: `node server.js` (Express) — ensure .env with DB and mail creds
