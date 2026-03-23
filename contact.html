@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contact | DULKIFAL</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#1f1f1f",
+              "on-tertiary": "#3b2f00",
+              "on-surface": "#e2e2e2",
+              "on-secondary-container": "#e59dff",
+              "surface-dim": "#131313",
+              "background": "#131313",
+              "secondary-container": "#6f258e",
+              "primary-fixed": "#d8e2ff",
+              "surface-container-low": "#1b1b1b",
+              "surface-bright": "#393939",
+              "surface-container-high": "#2a2a2a",
+              "surface": "#131313",
+              "inverse-on-surface": "#303030",
+              "error-container": "#93000a",
+              "on-error": "#690005",
+              "tertiary": "#ebc323",
+              "error": "#ffb4ab",
+              "surface-container-lowest": "#0e0e0e",
+              "secondary-fixed": "#f8d8ff",
+              "surface-tint": "#adc6ff",
+              "inverse-surface": "#e2e2e2",
+              "on-primary-container": "#00285c",
+              "on-tertiary-fixed": "#231b00",
+              "primary": "#adc6ff",
+              "tertiary-fixed-dim": "#ebc323",
+              "tertiary-container": "#cca800",
+              "on-primary-fixed-variant": "#004493",
+              "inverse-primary": "#005bc0",
+              "on-secondary": "#520071",
+              "primary-fixed-dim": "#adc6ff",
+              "on-tertiary-fixed-variant": "#564500",
+              "secondary-fixed-dim": "#ecb2ff",
+              "on-error-container": "#ffdad6",
+              "on-secondary-fixed": "#320047",
+              "outline-variant": "#414754",
+              "secondary": "#ecb2ff",
+              "primary-container": "#4b8eff",
+              "surface-container-highest": "#353535",
+              "on-background": "#e2e2e2",
+              "on-tertiary-container": "#4d3e00",
+              "on-primary-fixed": "#001a41",
+              "tertiary-fixed": "#ffe17c",
+              "surface-variant": "#353535",
+              "outline": "#8b90a0",
+              "on-surface-variant": "#c1c6d6",
+              "on-secondary-fixed-variant": "#6c228c",
+              "on-primary": "#002e69"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+    <style>
+        body {
+            background-color: #131313;
+            color: #e2e2e2;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+        .form-input-focus:focus {
+            outline: none;
+            box-shadow: 0 0 15px rgba(173, 198, 255, 0.2);
+            border-color: rgba(173, 198, 255, 0.5) !important;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 20px rgba(173, 198, 255, 0.2);
+        }
+        .no-line-rule { border: none !important; }
+        .tonal-shift-only { background-color: rgba(19, 19, 19, 0.8); }
+    </style>
+</head>
+<body class="selection:bg-primary selection:text-on-primary">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-[#131313]/80 backdrop-blur-xl no-line-rule tonal-shift-only">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-2xl font-black tracking-tighter text-[#adc6ff] font-['Space_Grotesk']">DULKIFAL</div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-[#c1c6d6] hover:text-[#adc6ff] transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="index.html">Home</a>
+                <a class="text-[#c1c6d6] hover:text-[#adc6ff] transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="about.html">About</a>
+                <a class="text-[#c1c6d6] hover:text-[#adc6ff] transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="skills.html">Skills</a>
+                <a class="text-[#c1c6d6] hover:text-[#adc6ff] transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="projects.html">Projects</a>
+                <a class="text-[#adc6ff] border-b-2 border-[#adc6ff] pb-1 font-['Space_Grotesk'] font-bold tracking-tight" href="contact.html">Contact</a>
+            </div>
+            <button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-lg font-bold hover:opacity-80 transition-all duration-300 scale-95 active:scale-90 font-['Space_Grotesk']">Hire Me</button>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 max-w-7xl mx-auto px-8">
+        <!-- Hero Section -->
+        <header class="editorial-grid mb-24 items-end">
+            <div class="col-span-12 md:col-span-8">
+                <span class="text-secondary font-label uppercase tracking-widest text-sm mb-4 block">Initiate Connection</span>
+                <h1 class="text-6xl md:text-8xl font-headline font-bold leading-[0.9] tracking-tighter text-on-surface">
+                    Let's Build <br/> <span class="text-primary italic">Together.</span>
+                </h1>
+            </div>
+            <div class="col-span-12 md:col-span-4 pb-2 mt-8 md:mt-0">
+                <p class="text-on-surface-variant font-body text-lg leading-[1.6] border-l-2 border-outline-variant/30 pl-6">
+                    Looking for a systems architect to engineer your next digital platform? Reach out to discuss technical strategies and high-end digital solutions.
+                </p>
+            </div>
+        </header>
+
+        <!-- Contact Content Grid -->
+        <section class="editorial-grid">
+            <!-- Contact Info Panel (Asymmetrical Left) -->
+            <div class="col-span-12 md:col-span-5 flex flex-col gap-8">
+                <div class="bg-surface-container-low p-10 rounded-2xl flex flex-col gap-10">
+                    <h3 class="text-3xl font-headline font-bold text-on-surface">Direct Lines</h3>
+                    
+                    <div class="flex items-start gap-6 group">
+                        <div class="w-12 h-12 flex items-center justify-center bg-surface-container-highest rounded-full text-primary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-mono uppercase tracking-widest text-outline mb-1">Email Protocol</span>
+                            <a href="mailto:dulkifilibacker@gmail.com" class="text-lg font-body font-medium text-on-surface group-hover:text-primary transition-colors">dulkifilibacker@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6 group">
+                        <div class="w-12 h-12 flex items-center justify-center bg-surface-container-highest rounded-full text-secondary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined">call</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-mono uppercase tracking-widest text-outline mb-1">Voice Relay</span>
+                            <a href="tel:+918714089827" class="text-lg font-body font-medium text-on-surface group-hover:text-secondary transition-colors">+91 8714089827</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6 group">
+                        <div class="w-12 h-12 flex items-center justify-center bg-surface-container-highest rounded-full text-tertiary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs font-mono uppercase tracking-widest text-outline mb-1">Physical Node</span>
+                            <span class="block text-lg font-body font-medium text-on-surface group-hover:text-tertiary transition-colors">Malappuram, Kerala, India</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="mt-8 pt-8 border-t border-outline-variant/20 flex gap-4">
+                        <a href="http://wa.me/+918714089827" class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-on-surface hover:bg-primary hover:text-on-primary transition-colors">
+                            <span class="material-symbols-outlined" style="font-size: 1.2rem;">chat</span>
+                        </a>
+                        <a href="https://github.com/dulkifal" class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-on-surface hover:bg-secondary hover:text-on-secondary transition-colors">
+                            <span class="material-symbols-outlined" style="font-size: 1.2rem;">code</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/dulkifal" class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-on-surface hover:bg-primary hover:text-on-primary transition-colors">
+                            <span class="material-symbols-outlined" style="font-size: 1.2rem;">work</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Construction (Asymmetrical Right) -->
+            <div class="col-span-12 md:col-start-7 md:col-span-6">
+                <div class="bg-surface-container-low p-10 md:p-14 rounded-2xl h-full">
+                    <h2 class="text-2xl font-headline font-bold text-on-surface mb-8">Transmit Request</h2>
+                    
+                    <form class="space-y-6 form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-mono uppercase tracking-widest text-on-surface-variant ml-1" for="name">Identifier</label>
+                                <input class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-xl form-input-focus placeholder:text-outline/40 transition-all font-body" id="name" placeholder="Your name" type="text"/>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-mono uppercase tracking-widest text-on-surface-variant ml-1" for="email">Return Node (Email)</label>
+                                <input class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-xl form-input-focus placeholder:text-outline/40 transition-all font-body" id="email" placeholder="email@domain.com" type="email"/>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-mono uppercase tracking-widest text-on-surface-variant ml-1" for="subject">Vector (Subject)</label>
+                            <input class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-xl form-input-focus placeholder:text-outline/40 transition-all font-body" id="subject" placeholder="Project discussion, recruiting, etc." type="text"/>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-mono uppercase tracking-widest text-on-surface-variant ml-1" for="message">Payload (Message)</label>
+                            <textarea class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-xl form-input-focus placeholder:text-outline/40 transition-all font-body min-h-[160px] resize-y" id="message" placeholder="Describe the scope of your parameters..."></textarea>
+                        </div>
+
+                        <div class="pt-4">
+                            <button class="bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold px-10 py-4 rounded-xl w-full btn-glow transition-all active:scale-95 flex items-center justify-center gap-2" type="button">
+                                Execute Transmission
+                                <span class="material-symbols-outlined text-sm">send</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#131313] w-full py-12 px-8 tonal-shift bg-surface-container-low mt-20">
+        <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-6">
+            <div class="text-lg font-bold text-[#adc6ff] font-['Space_Grotesk']">DULKIFAL</div>
+            <div class="flex gap-8">
+                <a class="text-[#c1c6d6] hover:text-[#ecb2ff] transition-colors font-['Inter'] text-sm tracking-wide" href="https://www.linkedin.com/in/dulkifal">LinkedIn</a>
+                <a class="text-[#c1c6d6] hover:text-[#ecb2ff] transition-colors font-['Inter'] text-sm tracking-wide" href="https://github.com/dulkifal">GitHub</a>
+                <a class="text-[#c1c6d6] hover:text-[#ecb2ff] transition-colors font-['Inter'] text-sm tracking-wide" href="#">Twitter</a>
+            </div>
+            <p class="text-[#c1c6d6] font-['Inter'] text-sm tracking-wide leading-6">© 2024 Dulkifal. Engineered with Precision.</p>
+        </div>
+    </footer>
+</body>
+</html>
