@@ -95,16 +95,34 @@
 <nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-[#131313]/80 backdrop-blur-xl no-line-rule tonal-shift-only">
 <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
 <div class="text-2xl font-black tracking-tighter text-[#adc6ff] font-['Space_Grotesk']">DULKIFAL</div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-[#adc6ff] border-b-2 border-[#adc6ff] pb-1 font-['Space_Grotesk'] font-bold tracking-tight" href="index.html">Home</a>
-<a class="text-[#c1c6d6] hover:text-[#adc6ff] transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="about.html">About</a>
-<a class="text-[#c1c6d6] hover:text-[#adc6ff] transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="skills.html">Skills</a>
-<a class="text-[#c1c6d6] hover:text-[#adc6ff] transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="projects.html">Projects</a>
-<a class="text-[#c1c6d6] hover:text-[#adc6ff] transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="contact.html">Contact</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#adc6ff] border-b-2 border-[#adc6ff] pb-1" href="index.html">Home</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors" href="about.html">About</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors" href="skills.html">Skills</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors" href="projects.html">Projects</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors" href="contact.html">Contact</a>
 </div>
-<button onclick="window.location.href='contact.html'" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-lg font-bold hover:opacity-80 transition-all duration-300 scale-95 active:scale-90">
-                Hire Me
-            </button>
+<div class="flex items-center gap-4">
+    <button onclick="window.location.href='contact.html'" class="hidden md:block bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-lg font-bold hover:opacity-80 transition-all duration-300 scale-95 active:scale-90 font-['Space_Grotesk']">
+        Hire Me
+    </button>
+    <button class="md:hidden text-[#adc6ff] hover:text-primary transition-colors focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-[#131313]/95 backdrop-blur-xl border-t border-[#353535] absolute w-full left-0 top-full shadow-2xl pb-6">
+    <div class="flex flex-col px-8 py-6 space-y-6">
+        <a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#adc6ff] border-b-2 border-[#adc6ff] pb-1 text-xl" href="index.html">Home</a>
+        <a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors text-xl" href="about.html">About</a>
+        <a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors text-xl" href="skills.html">Skills</a>
+        <a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors text-xl" href="projects.html">Projects</a>
+        <a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors text-xl" href="contact.html">Contact</a>
+        <button onclick="window.location.href='contact.html'" class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-4 rounded-lg font-bold hover:opacity-80 transition-all duration-300 mt-4 text-center font-['Space_Grotesk']">
+            Hire Me
+        </button>
+    </div>
 </div>
 </nav>
 <main class="pt-24">

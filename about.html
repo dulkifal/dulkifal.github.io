@@ -77,14 +77,21 @@
             background-color: #131313;
             color: #e2e2e2;
             font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
         }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         .editorial-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
+            display: flex;
+            flex-direction: column;
             gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .editorial-grid {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+            }
         }
         .glass-panel {
             background: rgba(31, 31, 31, 0.6);
@@ -99,13 +106,33 @@
 <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
 <div class="text-2xl font-black tracking-tighter text-[#adc6ff] font-['Space_Grotesk']">DULKIFAL</div>
 <div class="hidden md:flex items-center gap-8">
-<a class="text-[#c1c6d6] hover:text-[#adc6ff] transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="index.html">Home</a>
-<a class="text-[#adc6ff] border-b-2 border-[#adc6ff] pb-1 font-['Space_Grotesk'] font-bold tracking-tight" href="about.html">About</a>
-<a class="text-[#c1c6d6] hover:text-[#adc6ff] transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="skills.html">Skills</a>
-<a class="text-[#c1c6d6] hover:text-[#adc6ff] transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="projects.html">Projects</a>
-<a class="text-[#c1c6d6] hover:text-[#adc6ff] transition-colors font-['Space_Grotesk'] font-bold tracking-tight" href="contact.html">Contact</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors" href="index.html">Home</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#adc6ff] border-b-2 border-[#adc6ff] pb-1" href="about.html">About</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors" href="skills.html">Skills</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors" href="projects.html">Projects</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors" href="contact.html">Contact</a>
 </div>
-<button onclick="window.location.href='contact.html'" class="bg-primary text-on-primary px-6 py-2 font-bold hover:opacity-80 transition-all duration-300 scale-95 active:scale-90 font-['Space_Grotesk']">Hire Me</button>
+<div class="flex items-center gap-4">
+    <button onclick="window.location.href='contact.html'" class="hidden md:block bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-lg font-bold hover:opacity-80 transition-all duration-300 scale-95 active:scale-90 font-['Space_Grotesk']">
+        Hire Me
+    </button>
+    <button class="md:hidden text-[#adc6ff] hover:text-primary transition-colors focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-[#131313]/95 backdrop-blur-xl border-t border-[#353535] absolute w-full left-0 top-full shadow-2xl pb-6">
+    <div class="flex flex-col px-8 py-6 space-y-6">
+        <a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors text-xl" href="index.html">Home</a>
+        <a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#adc6ff] border-b-2 border-[#adc6ff] pb-1 text-xl" href="about.html">About</a>
+        <a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors text-xl" href="skills.html">Skills</a>
+        <a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors text-xl" href="projects.html">Projects</a>
+        <a class="font-['Space_Grotesk'] font-bold tracking-tight text-[#c1c6d6] hover:text-[#adc6ff] transition-colors text-xl" href="contact.html">Contact</a>
+        <button onclick="window.location.href='contact.html'" class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-4 rounded-lg font-bold hover:opacity-80 transition-all duration-300 mt-4 text-center font-['Space_Grotesk']">
+            Hire Me
+        </button>
+    </div>
 </div>
 </nav>
 <main class="pt-32 pb-24 max-w-7xl mx-auto px-8">
@@ -127,7 +154,7 @@
 <section class="editorial-grid mb-32 items-start">
 <div class="col-span-12 md:col-span-5 relative group">
 <div class="aspect-[4/5] bg-surface-container-high overflow-hidden rounded-lg">
-<img alt="Professional Portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="Modern professional portrait with dramatic lighting and dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoAm81hlQMSZRhYeUGtt0oK036olTKqjf3UEuY-sA5809YyxNLnYho-eHppI9K3aNfzinFmAwTwIp8h39zbiLvP1jdkqi3V_OE1wB9nE6yKCyuLCNPk3whoR_AeZj97L5Dcd2GOzvsPWJXcS5FEEgP7J8WsqPiyEzxAnZVc1hBUGI2dlRM4g1LMvyb9eLhTQjKwfEhIje87dH_0SUJImpOmimTc140b58FGRFGmoc5gLLkYZDhjKXTMXPNEW1LQ1F57tDDOUXE3qPe"/>
+<img alt="Professional Portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="Modern professional portrait with dramatic lighting and dark background" src="assets/arb-profile.png"/>
 </div>
 <!-- Decorative element -->
 <div class="absolute -bottom-6 -right-6 w-32 h-32 border-r-2 border-b-2 border-tertiary/30"></div>
@@ -135,10 +162,10 @@
 <div class="col-span-12 md:col-start-7 md:col-span-6 space-y-12">
 <div>
 <h2 class="text-primary font-headline text-3xl font-bold mb-6">The Journey to Full Stack</h2>
-<p class="text-on-surface-variant font-body text-lg leading-relaxed mb-6">
+<p class="text-on-surface-variant font-body text-base lg:text-lg leading-relaxed mb-6">
                         I am a dynamic and self-motivated Full Stack Developer equipped with a Bachelor of Arts in English and dedicated experience in advanced web solutions. My technical journey accelerated through hands-on development with the MERN stack, TypeScript, React-Native, and building scalable cloud infrastructures on AWS.
                     </p>
-<p class="text-on-surface-variant font-body text-lg leading-relaxed">
+<p class="text-on-surface-variant font-body text-base lg:text-lg leading-relaxed">
                         With over 2 years of professional experience, I have led teams, engineered resource management systems for massive events like Sibaq Artfest, and optimized databases that improve data retrieval speeds by 15%. My work spans from organizational dashboards to high-traffic E-commerce platforms.
                     </p>
 </div>
@@ -150,11 +177,12 @@
 </div>
 <div>
 <h2 class="text-primary font-headline text-3xl font-bold mb-6">Professional Evolution</h2>
-<p class="text-on-surface-variant font-body text-lg leading-relaxed">
+<p class="text-on-surface-variant font-body text-base lg:text-lg leading-relaxed">
                         Presently working as a Full Stack Developer, I not only adapt to fast-paced environments but actively push them forward. From revamping company portals for 25% faster load times to developing mobile-friendly PWAs that increase usage by 20%, my focus remains anchored in performance, security, and scalability.
                     </p>
 </div>
 </div>
+</section>
 <!-- Value Proposition Bento Grid -->
 <section class="mb-32">
 <h2 class="text-on-surface font-headline text-4xl font-bold mb-12 tracking-tight">How I Can Help Your Business</h2>
