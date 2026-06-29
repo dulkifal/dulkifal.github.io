@@ -213,31 +213,31 @@
                 <div class="bg-surface-container-low p-10 md:p-14 rounded-2xl h-full">
                     <h2 class="text-2xl font-headline font-bold text-on-surface mb-8">Transmit Request</h2>
                     
-                    <form class="space-y-6 form">
+                    <form id="contact-form" class="space-y-6 form">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label class="text-xs font-mono uppercase tracking-widest text-on-surface-variant ml-1" for="name">Identifier</label>
-                                <input class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-xl form-input-focus placeholder:text-outline/40 transition-all font-body" id="name" placeholder="Your name" type="text"/>
+                                <input name="name" class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-xl form-input-focus placeholder:text-outline/40 transition-all font-body" id="name" placeholder="Your name" type="text" required/>
                             </div>
                             <div class="space-y-2">
                                 <label class="text-xs font-mono uppercase tracking-widest text-on-surface-variant ml-1" for="email">Return Node (Email)</label>
-                                <input class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-xl form-input-focus placeholder:text-outline/40 transition-all font-body" id="email" placeholder="email@domain.com" type="email"/>
+                                <input name="email" class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-xl form-input-focus placeholder:text-outline/40 transition-all font-body" id="email" placeholder="email@domain.com" type="email" required/>
                             </div>
                         </div>
 
                         <div class="space-y-2">
                             <label class="text-xs font-mono uppercase tracking-widest text-on-surface-variant ml-1" for="subject">Vector (Subject)</label>
-                            <input class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-xl form-input-focus placeholder:text-outline/40 transition-all font-body" id="subject" placeholder="Project discussion, recruiting, etc." type="text"/>
+                            <input name="subject" class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-xl form-input-focus placeholder:text-outline/40 transition-all font-body" id="subject" placeholder="Project discussion, recruiting, etc." type="text" required/>
                         </div>
 
                         <div class="space-y-2">
                             <label class="text-xs font-mono uppercase tracking-widest text-on-surface-variant ml-1" for="message">Payload (Message)</label>
-                            <textarea class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-xl form-input-focus placeholder:text-outline/40 transition-all font-body min-h-[160px] resize-y" id="message" placeholder="Describe the scope of your parameters..."></textarea>
+                            <textarea name="message" class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-xl form-input-focus placeholder:text-outline/40 transition-all font-body min-h-[160px] resize-y" id="message" placeholder="Describe the scope of your parameters..." required></textarea>
                         </div>
 
                         <div class="pt-4">
-                            <button class="bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold px-10 py-4 rounded-xl w-full btn-glow transition-all active:scale-95 flex items-center justify-center gap-2" type="button">
-                                Execute Transmission
+                            <button class="bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold px-10 py-4 rounded-xl w-full btn-glow transition-all active:scale-95 flex items-center justify-center gap-2" type="submit">
+                                <span class="btn-text">Execute Transmission</span>
                                 <span class="material-symbols-outlined text-sm">send</span>
                             </button>
                         </div>
@@ -260,5 +260,131 @@
             <p class="text-[#c1c6d6] font-['Inter'] text-sm tracking-wide leading-6">© 2024 Dulkifal. Engineered with Precision.</p>
         </div>
     </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-8 right-8 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="flex items-center gap-3 bg-surface-container-high border border-outline-variant/30 text-on-surface px-6 py-4 rounded-xl shadow-2xl">
+            <span id="toast-icon" class="material-symbols-outlined text-2xl">info</span>
+            <div class="flex flex-col">
+                <span id="toast-title" class="font-headline font-bold text-sm">Notification</span>
+                <span id="toast-message" class="font-body text-xs text-on-surface-variant">Message text.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Submission & Toast Script -->
+    <script>
+        // Paste your deployed Google Apps Script Web App URL here
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwDX4dSIhdI9v6643VqFjHlt53UaYYf9-qU-CFh-z-pQMwg2Nr8TXTus33V4f9J2JHL/exec';
+        function showToast(title, message, type = 'info') {
+            const toast = document.getElementById('toast');
+            const icon = document.getElementById('toast-icon');
+            const titleEl = document.getElementById('toast-title');
+            const msgEl = document.getElementById('toast-message');
+            
+            titleEl.textContent = title;
+            msgEl.textContent = message;
+            
+            // Set colors & icons based on status type
+            if (type === 'success') {
+                icon.textContent = 'check_circle';
+                icon.className = 'material-symbols-outlined text-2xl text-primary'; // Tailwind primary
+            } else if (type === 'error') {
+                icon.textContent = 'error';
+                icon.className = 'material-symbols-outlined text-2xl text-error'; // Tailwind error (red)
+            } else if (type === 'warning') {
+                icon.textContent = 'warning';
+                icon.className = 'material-symbols-outlined text-2xl text-tertiary'; // Tailwind tertiary (yellow)
+            } else {
+                icon.textContent = 'info';
+                icon.className = 'material-symbols-outlined text-2xl text-outline';
+            }
+            
+            // Slide up & fade in
+            toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+            
+            // Automatically slide down & fade out after 6 seconds
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+            }, 6000);
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnIcon = submitBtn.querySelector('.material-symbols-outlined');
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Client-side validation
+            if (!name || !email || !subject || !message) {
+                showToast('Validation Error', 'Please populate all fields before transmission.', 'error');
+                return;
+            }
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showToast('Validation Error', 'Please provide a valid return node (email address).', 'error');
+                return;
+            }
+            
+            if (SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE' || !SCRIPT_URL) {
+                showToast('Configuration Required', 'Please set your Google Apps Script URL in contact.html to enable submission.', 'warning');
+                return;
+            }
+            
+            // UI Loading State
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            btnText.textContent = 'Transmitting...';
+            btnIcon.textContent = 'sync';
+            btnIcon.classList.add('animate-spin');
+            
+            try {
+                // Format request parameters URL-encoded as expected by standard Apps Script e.parameters
+                const formData = new URLSearchParams();
+                formData.append('name', name);
+                formData.append('email', email);
+                formData.append('subject', subject);
+                formData.append('message', message);
+                // Define the key order for formatting the email body
+                formData.append('formDataNameOrder', JSON.stringify(['name', 'email', 'subject', 'message']));
+                
+                const response = await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    redirect: 'follow'
+                });
+                
+                const result = await response.json();
+                
+                if (result.result === 'success') {
+                    showToast('Transmission Successful', 'Your request has been logged and emailed.', 'success');
+                    form.reset();
+                } else {
+                    showToast('Transmission Failed', result.error || 'Server rejected the request.', 'error');
+                }
+            } catch (err) {
+                console.error('Submission error:', err);
+                showToast('Transmission Error', 'Unable to reach the destination sheet. Check script web app settings.', 'error');
+            } finally {
+                // Restore button state
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                btnText.textContent = 'Execute Transmission';
+                btnIcon.textContent = 'send';
+                btnIcon.classList.remove('animate-spin');
+            }
+        });
+    </script>
 </body>
 </html>
